@@ -1,6 +1,5 @@
 package com.example.practice.service;
 
-import com.example.practice.controller.PostController;
 import com.example.practice.controller.dto.PostRequest;
 import com.example.practice.controller.dto.PostResponse;
 import com.example.practice.entity.PostEntity;
