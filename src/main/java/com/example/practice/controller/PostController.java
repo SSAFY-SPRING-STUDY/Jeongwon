@@ -14,12 +14,10 @@ import java.util.List;
 @RequestMapping("/api/posts")
 public class PostController {
     private final PostService postService;
-    private final ParentAwareNamingStrategy parentAwareNamingStrategy;
 
     @Autowired
     public PostController(PostService postService, ParentAwareNamingStrategy parentAwareNamingStrategy) {
         this.postService = postService;
-        this.parentAwareNamingStrategy = parentAwareNamingStrategy;
     }
 
 
