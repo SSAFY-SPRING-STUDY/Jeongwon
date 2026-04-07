@@ -4,7 +4,6 @@ import com.example.practice.controller.dto.PostRequest;
 import com.example.practice.controller.dto.PostResponse;
 import com.example.practice.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.jmx.ParentAwareNamingStrategy;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,7 +15,7 @@ public class PostController {
     private final PostService postService;
 
     @Autowired
-    public PostController(PostService postService, ParentAwareNamingStrategy parentAwareNamingStrategy) {
+    public PostController(PostService postService) {
         this.postService = postService;
     }
 
@@ -36,7 +35,7 @@ public class PostController {
 
 
     // 3. 특정 게시글 상세 조회
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     public PostResponse findPostById(@PathVariable Long id){
         PostResponse response = null;
         try{

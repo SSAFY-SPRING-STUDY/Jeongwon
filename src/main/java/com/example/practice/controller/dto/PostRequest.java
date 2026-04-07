@@ -28,10 +28,6 @@ public class PostRequest {
 
     }
 
-
-
-
-
     public static PostEntity toEntity(PostRequest request){
         return new PostEntity(
                 request.title, request.content, request.author

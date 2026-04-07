@@ -28,8 +28,6 @@ public class PostService {
         return response;
     }
 
-
-
     public List<PostResponse> findAll() {
         List<PostEntity> entityList = postRepository.findAll();
         List<PostResponse> responseList = new ArrayList<>();
@@ -40,8 +38,6 @@ public class PostService {
         }
         return responseList; // responseList를 controller에 넘겨주고
     }
-
-
 
     public PostResponse findById(Long id) {
         PostEntity foundEntity = postRepository.findById(id).orElseThrow(()-> new RuntimeException("ID값에 맞는 게시글이 존재하지 않습니다."));
