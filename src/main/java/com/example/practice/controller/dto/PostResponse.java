@@ -22,4 +22,6 @@ public class PostResponse {
                 entity.getId(), entity.getTitle(), entity.getContent(), entity.getAuthor()
         );
     }
+
+
 }
